@@ -1,5 +1,7 @@
 ### 调度中心与执行器的健康检查
 
+[解读](https://blog.csdn.net/Nuan_Feng/article/details/115619448?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1-115619448-blog-113416455.235%5Ev38%5Epc_relevant_default_base&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1-115619448-blog-113416455.235%5Ev38%5Epc_relevant_default_base&utm_relevant_index=1)
+
 调度中心即xxl-job的Java进程（服务端），执行器即引用任务所在Java进程（客户端）
 执行器进程每30秒在MySQL中更新updateTime字段，若90秒仍未更新，则被认为是dead状态
 ![img.png](assets/xxl-register.png)
@@ -13,7 +15,6 @@
 ```mysql
 select * from xxl_job_lock where lock_name = 'schedule_lock' for update
 ```
-
 
 ### 快慢触发器
 
@@ -61,8 +62,8 @@ ringThread 每秒中读取ConcurrentHashMap的数据，进行任务触发
 
 ![img.png](assets/xxl-trigger.png)
 
-
 ### 分布式调度策略
+
 ![img.png](assets/xxljob-strategy.png)
 
 通过策略模式，提供多种调度策略（第一个，随机，分片广播，一致性hash）
@@ -115,6 +116,7 @@ public class ExecutorRouteConsistentHash extends ExecutorRouter {
 ```
 
 ##### 任务告警
+
 预留jobAlarm接口，提供给开发者自行定义告警（钉钉/企微等等）
 
 ```java
