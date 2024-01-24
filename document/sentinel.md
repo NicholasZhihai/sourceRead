@@ -1,5 +1,8 @@
 ### SlotChain 责任链
 
+
+[官网](https://github.com/alibaba/Sentinel/wiki/Sentinel-%E6%A0%B8%E5%BF%83%E7%B1%BB%E8%A7%A3%E6%9E%90)
+
 责任链模式，设计为多个Slot，各司其职,并通过SPI机制动态从META-INF目录引入，给开发者提供自定义Slot的入口
 
 * 限流：FlowSlot
@@ -18,7 +21,6 @@
 状态机切换使用CAS操作防止并发异常。 AtomicReference 原子类 compareAndSet 方法
 
 ### Double Check Lock 双重检测锁与Volatile
-
 
 [DCL](https://blog.csdn.net/qq_39288456/article/details/112425223)
 
