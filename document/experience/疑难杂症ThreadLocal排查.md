@@ -23,7 +23,7 @@ gateway 设置鉴权,因为没有配置对应服务相关信息，预期为全�
 9. 增加log日志，tail -f 因为是好几次请求才能复现一次，tail -f一直刷，非常难看。未能定位问题。
 10. 通过一次次点击postman 并且记录放行请求数与拦截请求数，再cat grep日志数，最终发现放行的请求没有走到对应逻辑
 11. 准备定位为什么没有走到对应代码，是否是开源org.springframework.cloud.gateway.filter问题，无思路
-12. 请求代码作者铮超技术支持
+12. 请求代码作者技术支持
 13. 安装 arthas  通过watch命令 定位方法出参
 14. 实锤同样请求 返回不同结果
 15. 分析代码找到 原因 ：使用threadLocal 存储了线程白名单（目的是为了filter链路下的后续节点能快速通过），但没有正确的清空threadLocal数据，导致下一个请求过来，误用了白名单被放行
@@ -43,3 +43,11 @@ gateway 设置鉴权,因为没有配置对应服务相关信息，预期为全�
 ![image.png](assets/authFilter.png)
 
 ![image.png](assets/whitelist.png)
+
+### 解决
+
+使用请求上下文存储白名单标记，无需处理threadLocal（使用threadLocal处理好set和remove也能解决，但容易埋坑）
+
+![image.png](assets/exchange.png)
+
+![image.png](assets/fix.png)
