@@ -1,0 +1,1006 @@
+Type	Name	Status
+InnoDB		
+=====================================
+2024-02-01 21:29:25 0x7f15547ad700 INNODB MONITOR OUTPUT
+=====================================
+Per second averages calculated from the last 9 seconds
+-----------------
+BACKGROUND THREAD
+-----------------
+srv_master_thread loops: 33 srv_active, 0 srv_shutdown, 11835896 srv_idle
+srv_master_thread log flush and writes: 11835808
+----------
+SEMAPHORES
+----------
+------------------------
+LATEST DETECTED DEADLOCK
+------------------------
+2024-01-31 17:26:23 0x7f153e4b3700
+*** (1) TRANSACTION:
+TRANSACTION 84816735, ACTIVE 1258 sec fetching rows
+mysql tables in use 2, locked 2
+LOCK WAIT 47316 lock struct(s), heap size 5677176, 9054699 row lock(s), undo log entries 1
+MariaDB thread id 5104776, OS thread handle 139729216157440, query id 368692285 jqxfnlc131-140.hfjq.com 15.24.131.140 rdccloud Sending data
+delete from
+      t_zxg_group_stock
+    where group_id in(
+      select
+        group_id
+      from
+        t_zxg_group
+      where
+        user_phone = '15059191763'
+    )
+      and stock_code in
+     (  
+      '600675|83'
+     )
+*** WAITING FOR THIS LOCK TO BE GRANTED:
+RECORD LOCKS space id 7052 page no 149283 n bits 192 index PRIMARY of table `rdc-cloud`.`t_zxg_group_stock` trx id 84816735 lock_mode X waiting
+Record lock, heap no 139 PHYSICAL RECORD: n_fields 13; compact format; info bits 32
+ 0: len 8; hex 8000000002b3a6cd; asc         ;;
+ 1: len 6; hex 0000050e5a54; asc     ZT;;
+ 2: len 7; hex 5c0000367b270f; asc \\  6{' ;;
+ 3: len 8; hex 80000000000a83ec; asc         ;;
+ 4: len 4; hex 8000001e; asc     ;;
+ 5: len 9; hex 3030323431357c3930; asc 002415|90;;
+ 6: len 10; hex 323032342d30312d3239; asc 2024-01-29;;
+ 7: len 3; hex 801f46; asc   F;;
+ 8: SQL NULL;
+ 9: len 5; hex 99b27a62ca; asc   zb ;;
+ 10: len 5; hex 99b27a62ca; asc   zb ;;
+ 11: len 11; hex 3135303035383130353537; asc 15005810557;;
+ 12: len 11; hex 3135303035383130353537; asc 15005810557;;
+
+*** CONFLICTING WITH:
+RECORD LOCKS space id 7052 page no 149283 n bits 192 index PRIMARY of table `rdc-cloud`.`t_zxg_group_stock` trx id 84826708 lock_mode X locks rec but not gap
+Record lock, heap no 139 PHYSICAL RECORD: n_fields 13; compact format; info bits 32
+ 0: len 8; hex 8000000002b3a6cd; asc         ;;
+ 1: len 6; hex 0000050e5a54; asc     ZT;;
+ 2: len 7; hex 5c0000367b270f; asc \\  6{' ;;
+ 3: len 8; hex 80000000000a83ec; asc         ;;
+ 4: len 4; hex 8000001e; asc     ;;
+ 5: len 9; hex 3030323431357c3930; asc 002415|90;;
+ 6: len 10; hex 323032342d30312d3239; asc 2024-01-29;;
+ 7: len 3; hex 801f46; asc   F;;
+ 8: SQL NULL;
+ 9: len 5; hex 99b27a62ca; asc   zb ;;
+ 10: len 5; hex 99b27a62ca; asc   zb ;;
+ 11: len 11; hex 3135303035383130353537; asc 15005810557;;
+ 12: len 11; hex 3135303035383130353537; asc 15005810557;;
+
+Record lock, heap no 156 PHYSICAL RECORD: n_fields 13; compact format; info bits 32
+ 0: len 8; hex 8000000002b3a71d; asc         ;;
+ 1: len 6; hex 0000050e5a54; asc     ZT;;
+ 2: len 7; hex 5c0000367b2772; asc \\  6{'r;;
+ 3: len 8; hex 80000000000a83ec; asc         ;;
+ 4: len 4; hex 80000020; asc     ;;
+ 5: len 9; hex 3638383235367c3833; asc 688256|83;;
+ 6: len 10; hex 323032342d30312d3239; asc 2024-01-29;;
+ 7: len 3; hex 807e31; asc  ~1;;
+ 8: SQL NULL;
+ 9: len 5; hex 99b27a6430; asc   zd0;;
+ 10: len 5; hex 99b27a6430; asc   zd0;;
+ 11: len 11; hex 3135303035383130353537; asc 15005810557;;
+ 12: len 11; hex 3135303035383130353537; asc 15005810557;;
+
+Record lock, heap no 158 PHYSICAL RECORD: n_fields 13; compact format; info bits 32
+ 0: len 8; hex 8000000002b3a722; asc        ";;
+ 1: len 6; hex 0000050e5a54; asc     ZT;;
+ 2: len 7; hex 5c0000367b27d5; asc \\  6{' ;;
+ 3: len 8; hex 80000000000a83ec; asc         ;;
+ 4: len 4; hex 80000021; asc    !;;
+ 5: len 8; hex 30303032307c3732; asc 00020|72;;
+ 6: len 10; hex 323032342d30312d3239; asc 2024-01-29;;
+ 7: len 3; hex 800057; asc   W;;
+ 8: SQL NULL;
+ 9: len 5; hex 99b27a645c; asc   zd\\;;
+ 10: len 5; hex 99b27a645c; asc   zd\\;;
+ 11: len 11; hex 3135303035383130353537; asc 15005810557;;
+ 12: len 11; hex 3135303035383130353537; asc 15005810557;;
+
+Record lock, heap no 159 PHYSICAL RECORD: n_fields 13; compact format; info bits 32
+ 0: len 8; hex 8000000002b3a727; asc        ';;
+ 1: len 6; hex 0000050e5a54; asc     ZT;;
+ 2: len 7; hex 5c0000367b2838; asc \\  6{(8;;
+ 3: len 8; hex 80000000000a83ec; asc         ;;
+ 4: len 4; hex 80000022; asc    ";;
+ 5: len 8; hex 38303032307c3732; asc 80020|72;;
+ 6: len 10; hex 323032342d30312d3239; asc 2024-01-29;;
+ 7: SQL NULL;
+ 8: SQL NULL;
+ 9: len 5; hex 99b27a645e; asc   zd^;;
+ 10: len 5; hex 99b27a645e; asc   zd^;;
+ 11: len 11; hex 3135303035383130353537; asc 15005810557;;
+ 12: len 11; hex 3135303035383130353537; asc 15005810557;;
+
+
+*** (2) TRANSACTION:
+TRANSACTION 84826708, ACTIVE 31 sec starting index read
+mysql tables in use 1, locked 1
+LOCK WAIT 12 lock struct(s), heap size 1128, 34 row lock(s), undo log entries 15
+MariaDB thread id 5105782, OS thread handle 139730472232704, query id 368775909 jqxfnlc131-140.hfjq.com 15.24.131.140 rdccloud Updating
+delete from t_zxg_group_stock
+    where    t_zxg_group_stock.group_id in
+     (  
+      689132
+     , 
+      689152
+     , 
+      689157
+     , 
+      6709188
+     , 
+      6836882
+     , 
+      6970818
+     )
+*** WAITING FOR THIS LOCK TO BE GRANTED:
+RECORD LOCKS space id 7052 page no 24185 n bits 208 index PRIMARY of table `rdc-cloud`.`t_zxg_group_stock` trx id 84826708 lock_mode X locks rec but not gap waiting
+Record lock, heap no 177
+*** CONFLICTING WITH:
+RECORD LOCKS space id 7052 page no 24185 n bits 208 index PRIMARY of table `rdc-cloud`.`t_zxg_group_stock` trx id 84816735 lock_mode X
+Record lock, heap no 1
+Record lock, heap no 2
+Record lock, heap no 3
+Record lock, heap no 4
+Record lock, heap no 5
+Record lock, heap no 6
+Record lock, heap no 7
+Record lock, heap no 8
+Record lock, heap no 9
+Record lock, heap no 10
+Record lock, heap no 11
+Record lock, heap no 12
+Record lock, heap no 13
+Record lock, heap no 14
+Record lock, heap no 15
+Record lock, heap no 16
+Record lock, heap no 17
+Record lock, heap no 18
+Record lock, heap no 19
+Record lock, heap no 20
+Record lock, heap no 21
+Record lock, heap no 22
+Record lock, heap no 23
+Record lock, heap no 24
+Record lock, heap no 25
+Record lock, heap no 26
+Record lock, heap no 27
+Record lock, heap no 28
+Record lock, heap no 29
+Record lock, heap no 30
+Record lock, heap no 31
+Record lock, heap no 32
+Record lock, heap no 33
+Record lock, heap no 34
+Record lock, heap no 35
+Record lock, heap no 36
+Record lock, heap no 37
+Record lock, heap no 38
+Record lock, heap no 39
+Record lock, heap no 40
+Record lock, heap no 41
+Record lock, heap no 42
+Record lock, heap no 43
+Record lock, heap no 44
+Record lock, heap no 45
+Record lock, heap no 46
+Record lock, heap no 47
+Record lock, heap no 48
+Record lock, heap no 49
+Record lock, heap no 50
+Record lock, heap no 51
+Record lock, heap no 52
+Record lock, heap no 53
+Record lock, heap no 54
+Record lock, heap no 55
+Record lock, heap no 56
+Record lock, heap no 57
+Record lock, heap no 58
+Record lock, heap no 59
+Record lock, heap no 60
+Record lock, heap no 61
+Record lock, heap no 62
+Record lock, heap no 63
+Record lock, heap no 64
+Record lock, heap no 65
+Record lock, heap no 66
+Record lock, heap no 67
+Record lock, heap no 68
+Record lock, heap no 69
+Record lock, heap no 70
+Record lock, heap no 71
+Record lock, heap no 72
+Record lock, heap no 73
+Record lock, heap no 74
+Record lock, heap no 75
+Record lock, heap no 76
+Record lock, heap no 77
+Record lock, heap no 78
+Record lock, heap no 79
+Record lock, heap no 80
+Record lock, heap no 81
+Record lock, heap no 82
+Record lock, heap no 83
+Record lock, heap no 84
+Record lock, heap no 85
+Record lock, heap no 86
+Record lock, heap no 87
+Record lock, heap no 88
+Record lock, heap no 89
+Record lock, heap no 90
+Record lock, heap no 91
+Record lock, heap no 92
+Record lock, heap no 93
+Record lock, heap no 94
+Record lock, heap no 95
+Record lock, heap no 96
+Record lock, heap no 97
+Record lock, heap no 98
+Record lock, heap no 99
+Record lock, heap no 100
+Record lock, heap no 101
+Record lock, heap no 102
+Record lock, heap no 103
+Record lock, heap no 104
+Record lock, heap no 105
+Record lock, heap no 106
+Record lock, heap no 107
+Record lock, heap no 108
+Record lock, heap no 109
+Record lock, heap no 110
+Record lock, heap no 111
+Record lock, heap no 112
+Record lock, heap no 113
+Record lock, heap no 114
+Record lock, heap no 115
+Record lock, heap no 116
+Record lock, heap no 117
+Record lock, heap no 118
+Record lock, heap no 119
+Record lock, heap no 120
+Record lock, heap no 121
+Record lock, heap no 122
+Record lock, heap no 123
+Record lock, heap no 124
+Record lock, heap no 125
+Record lock, heap no 126
+Record lock, heap no 127
+Record lock, heap no 128
+Record lock, heap no 129
+Record lock, heap no 130
+Record lock, heap no 131
+Record lock, heap no 132
+Record lock, heap no 133
+Record lock, heap no 134
+Record lock, heap no 135
+Record lock, heap no 136
+Record lock, heap no 137
+Record lock, heap no 138
+Record lock, heap no 139
+Record lock, heap no 140
+Record lock, heap no 141
+Record lock, heap no 142
+Record lock, heap no 143
+Record lock, heap no 144
+Record lock, heap no 145
+Record lock, heap no 146
+Record lock, heap no 147
+Record lock, heap no 148
+Record lock, heap no 149
+Record lock, heap no 150
+Record lock, heap no 151
+Record lock, heap no 177
+Record lock, heap no 178
+Record lock, heap no 180
+Record lock, heap no 181
+Record lock, heap no 182
+Record lock, heap no 183
+Record lock, heap no 184
+Record lock, heap no 185
+Record lock, heap no 186
+Record lock, heap no 187
+Record lock, heap no 188
+Record lock, heap no 189
+Record lock, heap no 190
+Record lock, heap no 191
+Record lock, heap no 192
+Record lock, heap no 193
+Record lock, heap no 194
+Record lock, heap no 195
+Record lock, heap no 196
+Record lock, heap no 197
+Record lock, heap no 198
+Record lock, heap no 199
+Record lock, heap no 200
+Record lock, heap no 201
+Record lock, heap no 202
+Record lock, heap no 203
+Record lock, heap no 204
+*** WE ROLL BACK TRANSACTION (2)
+------------
+TRANSACTIONS
+------------
+Trx id counter 85542657
+Purge done for trx's n:o < 85542654 undo n:o < 0 state: running
+History list length 5
+LIST OF TRANSACTIONS FOR EACH SESSION:
+---TRANSACTION 85542656, ACTIVE 1 sec starting index read
+mysql tables in use 2, locked 2
+LOCK WAIT 2 lock struct(s), heap size 1128, 1 row lock(s)
+MariaDB thread id 5225286, OS thread handle 139729108412160, query id 378124097 jqxfnlc131-140.hfjq.com 15.24.131.140 rdccloud Updating
+DELETE
+    from
+      t_zxg_group_stock
+    where
+        group_id in (
+        select
+          group_id
+        from
+          t_zxg_group
+        where
+          user_phone = '18218757984'
+        and redis_group_id = 1
+          )
+      and stock_code in
+     (  
+      '002036|90'
+     )
+------- TRX HAS BEEN WAITING 536764 ns FOR THIS LOCK TO BE GRANTED:
+RECORD LOCKS space id 7052 page no 10 n bits 208 index PRIMARY of table `rdc-cloud`.`t_zxg_group_stock` trx id 85542656 lock_mode X waiting
+Record lock, heap no 2 PHYSICAL RECORD: n_fields 13; compact format; info bits 0
+ 0: len 8; hex 8000000000000002; asc         ;;
+ 1: len 6; hex 000000000000; asc       ;;
+ 2: len 7; hex 80000000000000; asc        ;;
+ 3: len 8; hex 80000000000026e0; asc       & ;;
+ 4: len 4; hex 80000000; asc     ;;
+ 5: len 9; hex 3131333637347c3833; asc 113674|83;;
+ 6: SQL NULL;
+ 7: SQL NULL;
+ 8: SQL NULL;
+ 9: len 5; hex 99b170ea3b; asc   p ;;;
+ 10: len 5; hex 99b170ea3b; asc   p ;;;
+ 11: len 6; hex 7a7a53796e63; asc zzSync;;
+ 12: len 6; hex 7a7a53796e63; asc zzSync;;
+
+------------------
+---TRANSACTION 85542643, ACTIVE 5 sec starting index read
+mysql tables in use 2, locked 2
+LOCK WAIT 2 lock struct(s), heap size 1128, 1 row lock(s)
+MariaDB thread id 5225284, OS thread handle 139739248367360, query id 378124000 jqxfnlc131-140.hfjq.com 15.24.131.140 rdccloud Updating
+DELETE
+    from
+      t_zxg_group_stock
+    where
+        group_id in (
+        select
+          group_id
+        from
+          t_zxg_group
+        where
+          user_phone = '18218757984'
+        and redis_group_id = 1
+          )
+      and stock_code in
+     (  
+      '605218|83'
+     )
+------- TRX HAS BEEN WAITING 4125195 ns FOR THIS LOCK TO BE GRANTED:
+RECORD LOCKS space id 7052 page no 10 n bits 208 index PRIMARY of table `rdc-cloud`.`t_zxg_group_stock` trx id 85542643 lock_mode X waiting
+Record lock, heap no 2 PHYSICAL RECORD: n_fields 13; compact format; info bits 0
+ 0: len 8; hex 8000000000000002; asc         ;;
+ 1: len 6; hex 000000000000; asc       ;;
+ 2: len 7; hex 80000000000000; asc        ;;
+ 3: len 8; hex 80000000000026e0; asc       & ;;
+ 4: len 4; hex 80000000; asc     ;;
+ 5: len 9; hex 3131333637347c3833; asc 113674|83;;
+ 6: SQL NULL;
+ 7: SQL NULL;
+ 8: SQL NULL;
+ 9: len 5; hex 99b170ea3b; asc   p ;;;
+ 10: len 5; hex 99b170ea3b; asc   p ;;;
+ 11: len 6; hex 7a7a53796e63; asc zzSync;;
+ 12: len 6; hex 7a7a53796e63; asc zzSync;;
+
+------------------
+---TRANSACTION 85542632, ACTIVE 6 sec starting index read
+mysql tables in use 2, locked 2
+LOCK WAIT 2 lock struct(s), heap size 1128, 1 row lock(s)
+MariaDB thread id 5225279, OS thread handle 139729391490816, query id 378123854 jqxfnlc131-140.hfjq.com 15.24.131.140 rdccloud Updating
+DELETE
+    from
+      t_zxg_group_stock
+    where
+        group_id in (
+        select
+          group_id
+        from
+          t_zxg_group
+        where
+          user_phone = '18218757984'
+        and redis_group_id = 1
+          )
+      and stock_code in
+     (  
+      '002953|90'
+     )
+------- TRX HAS BEEN WAITING 5343157 ns FOR THIS LOCK TO BE GRANTED:
+RECORD LOCKS space id 7052 page no 10 n bits 208 index PRIMARY of table `rdc-cloud`.`t_zxg_group_stock` trx id 85542632 lock_mode X waiting
+Record lock, heap no 2 PHYSICAL RECORD: n_fields 13; compact format; info bits 0
+ 0: len 8; hex 8000000000000002; asc         ;;
+ 1: len 6; hex 000000000000; asc       ;;
+ 2: len 7; hex 80000000000000; asc        ;;
+ 3: len 8; hex 80000000000026e0; asc       & ;;
+ 4: len 4; hex 80000000; asc     ;;
+ 5: len 9; hex 3131333637347c3833; asc 113674|83;;
+ 6: SQL NULL;
+ 7: SQL NULL;
+ 8: SQL NULL;
+ 9: len 5; hex 99b170ea3b; asc   p ;;;
+ 10: len 5; hex 99b170ea3b; asc   p ;;;
+ 11: len 6; hex 7a7a53796e63; asc zzSync;;
+ 12: len 6; hex 7a7a53796e63; asc zzSync;;
+
+------------------
+---TRANSACTION 85542603, ACTIVE 12 sec starting index read
+mysql tables in use 2, locked 2
+LOCK WAIT 2 lock struct(s), heap size 1128, 1 row lock(s)
+MariaDB thread id 5225275, OS thread handle 139729425897216, query id 378123578 jqxfnlc131-140.hfjq.com 15.24.131.140 rdccloud Updating
+DELETE
+    from
+      t_zxg_group_stock
+    where
+        group_id in (
+        select
+          group_id
+        from
+          t_zxg_group
+        where
+          user_phone = '18218757984'
+        and redis_group_id = 1
+          )
+      and stock_code in
+     (  
+      '000670|90'
+     )
+------- TRX HAS BEEN WAITING 11390498 ns FOR THIS LOCK TO BE GRANTED:
+RECORD LOCKS space id 7052 page no 10 n bits 208 index PRIMARY of table `rdc-cloud`.`t_zxg_group_stock` trx id 85542603 lock_mode X waiting
+Record lock, heap no 2 PHYSICAL RECORD: n_fields 13; compact format; info bits 0
+ 0: len 8; hex 8000000000000002; asc         ;;
+ 1: len 6; hex 000000000000; asc       ;;
+ 2: len 7; hex 80000000000000; asc        ;;
+ 3: len 8; hex 80000000000026e0; asc       & ;;
+ 4: len 4; hex 80000000; asc     ;;
+ 5: len 9; hex 3131333637347c3833; asc 113674|83;;
+ 6: SQL NULL;
+ 7: SQL NULL;
+ 8: SQL NULL;
+ 9: len 5; hex 99b170ea3b; asc   p ;;;
+ 10: len 5; hex 99b170ea3b; asc   p ;;;
+ 11: len 6; hex 7a7a53796e63; asc zzSync;;
+ 12: len 6; hex 7a7a53796e63; asc zzSync;;
+
+------------------
+---TRANSACTION (0x7f17c6e4d880), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION 85542598, ACTIVE 13 sec starting index read
+mysql tables in use 2, locked 2
+LOCK WAIT 2 lock struct(s), heap size 1128, 1 row lock(s)
+MariaDB thread id 5225271, OS thread handle 139729862317824, query id 378123550 jqxfnlc131-140.hfjq.com 15.24.131.140 rdccloud Updating
+DELETE
+    from
+      t_zxg_group_stock
+    where
+        group_id in (
+        select
+          group_id
+        from
+          t_zxg_group
+        where
+          user_phone = '18218757984'
+        and redis_group_id = 1
+          )
+      and stock_code in
+     (  
+      '600686|83'
+     )
+------- TRX HAS BEEN WAITING 12602755 ns FOR THIS LOCK TO BE GRANTED:
+RECORD LOCKS space id 7052 page no 10 n bits 208 index PRIMARY of table `rdc-cloud`.`t_zxg_group_stock` trx id 85542598 lock_mode X waiting
+Record lock, heap no 2 PHYSICAL RECORD: n_fields 13; compact format; info bits 0
+ 0: len 8; hex 8000000000000002; asc         ;;
+ 1: len 6; hex 000000000000; asc       ;;
+ 2: len 7; hex 80000000000000; asc        ;;
+ 3: len 8; hex 80000000000026e0; asc       & ;;
+ 4: len 4; hex 80000000; asc     ;;
+ 5: len 9; hex 3131333637347c3833; asc 113674|83;;
+ 6: SQL NULL;
+ 7: SQL NULL;
+ 8: SQL NULL;
+ 9: len 5; hex 99b170ea3b; asc   p ;;;
+ 10: len 5; hex 99b170ea3b; asc   p ;;;
+ 11: len 6; hex 7a7a53796e63; asc zzSync;;
+ 12: len 6; hex 7a7a53796e63; asc zzSync;;
+
+------------------
+---TRANSACTION 85542591, ACTIVE 14 sec starting index read
+mysql tables in use 2, locked 2
+LOCK WAIT 2 lock struct(s), heap size 1128, 1 row lock(s)
+MariaDB thread id 5225264, OS thread handle 139730393376512, query id 378123476 jqxfnlc131-140.hfjq.com 15.24.131.140 rdccloud Updating
+DELETE
+    from
+      t_zxg_group_stock
+    where
+        group_id in (
+        select
+          group_id
+        from
+          t_zxg_group
+        where
+          user_phone = '18218757984'
+        and redis_group_id = 1
+          )
+      and stock_code in
+     (  
+      '603158|83'
+     )
+------- TRX HAS BEEN WAITING 13855031 ns FOR THIS LOCK TO BE GRANTED:
+RECORD LOCKS space id 7052 page no 10 n bits 208 index PRIMARY of table `rdc-cloud`.`t_zxg_group_stock` trx id 85542591 lock_mode X waiting
+Record lock, heap no 2 PHYSICAL RECORD: n_fields 13; compact format; info bits 0
+ 0: len 8; hex 8000000000000002; asc         ;;
+ 1: len 6; hex 000000000000; asc       ;;
+ 2: len 7; hex 80000000000000; asc        ;;
+ 3: len 8; hex 80000000000026e0; asc       & ;;
+ 4: len 4; hex 80000000; asc     ;;
+ 5: len 9; hex 3131333637347c3833; asc 113674|83;;
+ 6: SQL NULL;
+ 7: SQL NULL;
+ 8: SQL NULL;
+ 9: len 5; hex 99b170ea3b; asc   p ;;;
+ 10: len 5; hex 99b170ea3b; asc   p ;;;
+ 11: len 6; hex 7a7a53796e63; asc zzSync;;
+ 12: len 6; hex 7a7a53796e63; asc zzSync;;
+
+------------------
+---TRANSACTION 85542588, ACTIVE 15 sec starting index read
+mysql tables in use 2, locked 2
+LOCK WAIT 2 lock struct(s), heap size 1128, 1 row lock(s)
+MariaDB thread id 5225259, OS thread handle 139738890442496, query id 378123457 jqxfnlc131-140.hfjq.com 15.24.131.140 rdccloud Updating
+DELETE
+    from
+      t_zxg_group_stock
+    where
+        group_id in (
+        select
+          group_id
+        from
+          t_zxg_group
+        where
+          user_phone = '18218757984'
+        and redis_group_id = 1
+          )
+      and stock_code in
+     (  
+      '002291|90'
+     )
+------- TRX HAS BEEN WAITING 15042323 ns FOR THIS LOCK TO BE GRANTED:
+RECORD LOCKS space id 7052 page no 10 n bits 208 index PRIMARY of table `rdc-cloud`.`t_zxg_group_stock` trx id 85542588 lock_mode X waiting
+Record lock, heap no 2 PHYSICAL RECORD: n_fields 13; compact format; info bits 0
+ 0: len 8; hex 8000000000000002; asc         ;;
+ 1: len 6; hex 000000000000; asc       ;;
+ 2: len 7; hex 80000000000000; asc        ;;
+ 3: len 8; hex 80000000000026e0; asc       & ;;
+ 4: len 4; hex 80000000; asc     ;;
+ 5: len 9; hex 3131333637347c3833; asc 113674|83;;
+ 6: SQL NULL;
+ 7: SQL NULL;
+ 8: SQL NULL;
+ 9: len 5; hex 99b170ea3b; asc   p ;;;
+ 10: len 5; hex 99b170ea3b; asc   p ;;;
+ 11: len 6; hex 7a7a53796e63; asc zzSync;;
+ 12: len 6; hex 7a7a53796e63; asc zzSync;;
+
+------------------
+---TRANSACTION 85542583, ACTIVE 17 sec starting index read
+mysql tables in use 2, locked 2
+LOCK WAIT 2 lock struct(s), heap size 1128, 1 row lock(s)
+MariaDB thread id 5225253, OS thread handle 139729047181056, query id 378123397 jqxfnlc131-140.hfjq.com 15.24.131.140 rdccloud Updating
+DELETE
+    from
+      t_zxg_group_stock
+    where
+        group_id in (
+        select
+          group_id
+        from
+          t_zxg_group
+        where
+          user_phone = '18218757984'
+        and redis_group_id = 1
+          )
+      and stock_code in
+     (  
+      '002137|90'
+     )
+------- TRX HAS BEEN WAITING 16265368 ns FOR THIS LOCK TO BE GRANTED:
+RECORD LOCKS space id 7052 page no 10 n bits 208 index PRIMARY of table `rdc-cloud`.`t_zxg_group_stock` trx id 85542583 lock_mode X waiting
+Record lock, heap no 2 PHYSICAL RECORD: n_fields 13; compact format; info bits 0
+ 0: len 8; hex 8000000000000002; asc         ;;
+ 1: len 6; hex 000000000000; asc       ;;
+ 2: len 7; hex 80000000000000; asc        ;;
+ 3: len 8; hex 80000000000026e0; asc       & ;;
+ 4: len 4; hex 80000000; asc     ;;
+ 5: len 9; hex 3131333637347c3833; asc 113674|83;;
+ 6: SQL NULL;
+ 7: SQL NULL;
+ 8: SQL NULL;
+ 9: len 5; hex 99b170ea3b; asc   p ;;;
+ 10: len 5; hex 99b170ea3b; asc   p ;;;
+ 11: len 6; hex 7a7a53796e63; asc zzSync;;
+ 12: len 6; hex 7a7a53796e63; asc zzSync;;
+
+------------------
+---TRANSACTION 85542509, ACTIVE 40 sec starting index read
+mysql tables in use 2, locked 2
+LOCK WAIT 2 lock struct(s), heap size 1128, 1 row lock(s)
+MariaDB thread id 5225250, OS thread handle 139737701791488, query id 378122141 jqxfnlc131-140.hfjq.com 15.24.131.140 rdccloud Updating
+DELETE
+    from
+      t_zxg_group_stock
+    where
+        group_id in (
+        select
+          group_id
+        from
+          t_zxg_group
+        where
+          user_phone = '17733830422'
+        and redis_group_id = 1
+          )
+      and stock_code in
+     (  
+      '600405|83'
+     )
+------- TRX HAS BEEN WAITING 39984977 ns FOR THIS LOCK TO BE GRANTED:
+RECORD LOCKS space id 7052 page no 10 n bits 208 index PRIMARY of table `rdc-cloud`.`t_zxg_group_stock` trx id 85542509 lock_mode X waiting
+Record lock, heap no 2 PHYSICAL RECORD: n_fields 13; compact format; info bits 0
+ 0: len 8; hex 8000000000000002; asc         ;;
+ 1: len 6; hex 000000000000; asc       ;;
+ 2: len 7; hex 80000000000000; asc        ;;
+ 3: len 8; hex 80000000000026e0; asc       & ;;
+ 4: len 4; hex 80000000; asc     ;;
+ 5: len 9; hex 3131333637347c3833; asc 113674|83;;
+ 6: SQL NULL;
+ 7: SQL NULL;
+ 8: SQL NULL;
+ 9: len 5; hex 99b170ea3b; asc   p ;;;
+ 10: len 5; hex 99b170ea3b; asc   p ;;;
+ 11: len 6; hex 7a7a53796e63; asc zzSync;;
+ 12: len 6; hex 7a7a53796e63; asc zzSync;;
+
+------------------
+---TRANSACTION 85542498, ACTIVE 43 sec starting index read
+mysql tables in use 2, locked 2
+LOCK WAIT 2 lock struct(s), heap size 1128, 1 row lock(s)
+MariaDB thread id 5225246, OS thread handle 139729079535360, query id 378122048 jqxfnlc131-140.hfjq.com 15.24.131.140 rdccloud Updating
+DELETE
+    from
+      t_zxg_group_stock
+    where
+        group_id in (
+        select
+          group_id
+        from
+          t_zxg_group
+        where
+          user_phone = '17733830422'
+        and redis_group_id = 1
+          )
+      and stock_code in
+     (  
+      '000561|90'
+     )
+------- TRX HAS BEEN WAITING 42345160 ns FOR THIS LOCK TO BE GRANTED:
+RECORD LOCKS space id 7052 page no 10 n bits 208 index PRIMARY of table `rdc-cloud`.`t_zxg_group_stock` trx id 85542498 lock_mode X waiting
+Record lock, heap no 2 PHYSICAL RECORD: n_fields 13; compact format; info bits 0
+ 0: len 8; hex 8000000000000002; asc         ;;
+ 1: len 6; hex 000000000000; asc       ;;
+ 2: len 7; hex 80000000000000; asc        ;;
+ 3: len 8; hex 80000000000026e0; asc       & ;;
+ 4: len 4; hex 80000000; asc     ;;
+ 5: len 9; hex 3131333637347c3833; asc 113674|83;;
+ 6: SQL NULL;
+ 7: SQL NULL;
+ 8: SQL NULL;
+ 9: len 5; hex 99b170ea3b; asc   p ;;;
+ 10: len 5; hex 99b170ea3b; asc   p ;;;
+ 11: len 6; hex 7a7a53796e63; asc zzSync;;
+ 12: len 6; hex 7a7a53796e63; asc zzSync;;
+
+------------------
+---TRANSACTION 85542487, ACTIVE 45 sec starting index read
+mysql tables in use 2, locked 2
+LOCK WAIT 2 lock struct(s), heap size 1128, 1 row lock(s)
+MariaDB thread id 5225245, OS thread handle 139729983964928, query id 378121955 jqxfnlc131-140.hfjq.com 15.24.131.140 rdccloud Updating
+DELETE
+    from
+      t_zxg_group_stock
+    where
+        group_id in (
+        select
+          group_id
+        from
+          t_zxg_group
+        where
+          user_phone = '17733830422'
+        and redis_group_id = 1
+          )
+      and stock_code in
+     (  
+      '002012.sz|4614'
+     )
+------- TRX HAS BEEN WAITING 44468984 ns FOR THIS LOCK TO BE GRANTED:
+RECORD LOCKS space id 7052 page no 10 n bits 208 index PRIMARY of table `rdc-cloud`.`t_zxg_group_stock` trx id 85542487 lock_mode X waiting
+Record lock, heap no 2 PHYSICAL RECORD: n_fields 13; compact format; info bits 0
+ 0: len 8; hex 8000000000000002; asc         ;;
+ 1: len 6; hex 000000000000; asc       ;;
+ 2: len 7; hex 80000000000000; asc        ;;
+ 3: len 8; hex 80000000000026e0; asc       & ;;
+ 4: len 4; hex 80000000; asc     ;;
+ 5: len 9; hex 3131333637347c3833; asc 113674|83;;
+ 6: SQL NULL;
+ 7: SQL NULL;
+ 8: SQL NULL;
+ 9: len 5; hex 99b170ea3b; asc   p ;;;
+ 10: len 5; hex 99b170ea3b; asc   p ;;;
+ 11: len 6; hex 7a7a53796e63; asc zzSync;;
+ 12: len 6; hex 7a7a53796e63; asc zzSync;;
+
+------------------
+---TRANSACTION 85542484, ACTIVE 47 sec starting index read
+mysql tables in use 2, locked 2
+LOCK WAIT 2 lock struct(s), heap size 1128, 1 row lock(s)
+MariaDB thread id 5225241, OS thread handle 139729084143360, query id 378121869 jqxfnlc131-140.hfjq.com 15.24.131.140 rdccloud Updating
+DELETE
+    from
+      t_zxg_group_stock
+    where
+        group_id in (
+        select
+          group_id
+        from
+          t_zxg_group
+        where
+          user_phone = '17733830422'
+        and redis_group_id = 1
+          )
+      and stock_code in
+     (  
+      '002480|90'
+     )
+------- TRX HAS BEEN WAITING 46765611 ns FOR THIS LOCK TO BE GRANTED:
+RECORD LOCKS space id 7052 page no 10 n bits 208 index PRIMARY of table `rdc-cloud`.`t_zxg_group_stock` trx id 85542484 lock_mode X waiting
+Record lock, heap no 2 PHYSICAL RECORD: n_fields 13; compact format; info bits 0
+ 0: len 8; hex 8000000000000002; asc         ;;
+ 1: len 6; hex 000000000000; asc       ;;
+ 2: len 7; hex 80000000000000; asc        ;;
+ 3: len 8; hex 80000000000026e0; asc       & ;;
+ 4: len 4; hex 80000000; asc     ;;
+ 5: len 9; hex 3131333637347c3833; asc 113674|83;;
+ 6: SQL NULL;
+ 7: SQL NULL;
+ 8: SQL NULL;
+ 9: len 5; hex 99b170ea3b; asc   p ;;;
+ 10: len 5; hex 99b170ea3b; asc   p ;;;
+ 11: len 6; hex 7a7a53796e63; asc zzSync;;
+ 12: len 6; hex 7a7a53796e63; asc zzSync;;
+
+------------------
+---TRANSACTION 85542478, ACTIVE 49 sec starting index read
+mysql tables in use 2, locked 2
+LOCK WAIT 2 lock struct(s), heap size 1128, 1 row lock(s)
+MariaDB thread id 5225237, OS thread handle 139729018513152, query id 378121795 jqxfnlc131-140.hfjq.com 15.24.131.140 rdccloud Updating
+DELETE
+    from
+      t_zxg_group_stock
+    where
+        group_id in (
+        select
+          group_id
+        from
+          t_zxg_group
+        where
+          user_phone = '18650010216'
+        and redis_group_id = 1
+          )
+      and stock_code in
+     (  
+      '300176|90'
+     )
+------- TRX HAS BEEN WAITING 49042434 ns FOR THIS LOCK TO BE GRANTED:
+RECORD LOCKS space id 7052 page no 10 n bits 208 index PRIMARY of table `rdc-cloud`.`t_zxg_group_stock` trx id 85542478 lock_mode X waiting
+Record lock, heap no 2 PHYSICAL RECORD: n_fields 13; compact format; info bits 0
+ 0: len 8; hex 8000000000000002; asc         ;;
+ 1: len 6; hex 000000000000; asc       ;;
+ 2: len 7; hex 80000000000000; asc        ;;
+ 3: len 8; hex 80000000000026e0; asc       & ;;
+ 4: len 4; hex 80000000; asc     ;;
+ 5: len 9; hex 3131333637347c3833; asc 113674|83;;
+ 6: SQL NULL;
+ 7: SQL NULL;
+ 8: SQL NULL;
+ 9: len 5; hex 99b170ea3b; asc   p ;;;
+ 10: len 5; hex 99b170ea3b; asc   p ;;;
+ 11: len 6; hex 7a7a53796e63; asc zzSync;;
+ 12: len 6; hex 7a7a53796e63; asc zzSync;;
+
+------------------
+---TRANSACTION (0x7f17c6e50f80), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION 85542566, ACTIVE 26 sec starting index read
+mysql tables in use 2, locked 2
+LOCK WAIT 2 lock struct(s), heap size 1128, 1 row lock(s)
+MariaDB thread id 5225178, OS thread handle 139740551169792, query id 378123028 jqxfnlc131-140.hfjq.com 15.24.131.140 rdccloud Updating
+DELETE
+    from
+      t_zxg_group_stock
+    where
+        group_id in (
+        select
+          group_id
+        from
+          t_zxg_group
+        where
+          user_phone = '17733830422'
+        and redis_group_id = 1
+          )
+      and stock_code in
+     (  
+      '600133|83'
+     )
+------- TRX HAS BEEN WAITING 25490843 ns FOR THIS LOCK TO BE GRANTED:
+RECORD LOCKS space id 7052 page no 10 n bits 208 index PRIMARY of table `rdc-cloud`.`t_zxg_group_stock` trx id 85542566 lock_mode X waiting
+Record lock, heap no 2 PHYSICAL RECORD: n_fields 13; compact format; info bits 0
+ 0: len 8; hex 8000000000000002; asc         ;;
+ 1: len 6; hex 000000000000; asc       ;;
+ 2: len 7; hex 80000000000000; asc        ;;
+ 3: len 8; hex 80000000000026e0; asc       & ;;
+ 4: len 4; hex 80000000; asc     ;;
+ 5: len 9; hex 3131333637347c3833; asc 113674|83;;
+ 6: SQL NULL;
+ 7: SQL NULL;
+ 8: SQL NULL;
+ 9: len 5; hex 99b170ea3b; asc   p ;;;
+ 10: len 5; hex 99b170ea3b; asc   p ;;;
+ 11: len 6; hex 7a7a53796e63; asc zzSync;;
+ 12: len 6; hex 7a7a53796e63; asc zzSync;;
+
+------------------
+---TRANSACTION (0x7f17c6e49680), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e46a80), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e44980), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e4e380), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e53b80), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e4f980), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e57d80), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e52580), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e5bf80), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e5b480), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION 85539668, ACTIVE 669 sec fetching rows
+mysql tables in use 2, locked 2
+24984 lock struct(s), heap size 3006584, 4728323 row lock(s), undo log entries 1
+MariaDB thread id 5224151, OS thread handle 139729406236416, query id 378088227 jqxfnlc131-140.hfjq.com 15.24.131.140 rdccloud Sending data
+delete from
+      t_zxg_group_stock
+    where group_id in(
+      select
+        group_id
+      from
+        t_zxg_group
+      where
+        user_phone = '13960715442'
+    )
+      and stock_code in
+     (  
+      '002217|90'
+     )
+---TRANSACTION (0x7f17c6e40780), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e54680), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e43e80), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e47580), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e5a980), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e53080), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e57280), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e45480), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e4ee80), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e55c80), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e41d80), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e4a180), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e50480), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e4cd80), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e48b80), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e41280), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e64e80), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c70b8f80), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c708e580), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e3fc80), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e3f180), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e3e680), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+---TRANSACTION (0x7f17c6e3db80), not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+--------
+FILE I/O
+--------
+Pending flushes (fsync): 0
+3875957890 OS file reads, 667270175 OS file writes, 73355702 OS fsyncs
+76.88 reads/s, 16384 avg bytes/read, 0.89 writes/s, 0.89 fsyncs/s
+---
+LOG
+---
+Log sequence number 2671858590435
+Log flushed up to   2671858590413
+Pages flushed up to 2671848646710
+Last checkpoint at  2671838598571
+----------------------
+BUFFER POOL AND MEMORY
+----------------------
+Total large memory allocated 167772160
+Dictionary memory allocated 1912872
+Buffer pool size   8064
+Free buffers       0
+Database pages     7881
+Old database pages 2889
+Modified db pages  261
+Percent of dirty pages(LRU & free pages): 3.311
+Max dirty pages percent: 90.000
+Pending reads 0
+Pending writes: LRU 0, flush list 0
+Pages made young 398337879, not young 208194645856
+7.55 youngs/s, 6942.56 non-youngs/s
+Pages read 3875925381, created 97008321, written 630101226
+76.88 reads/s, 0.00 creates/s, 0.00 writes/s
+Buffer pool hit rate 998 / 1000, young-making rate 0 / 1000 not 125 / 1000
+Pages read ahead 0.00/s, evicted without access 0.33/s, Random read ahead 0.00/s
+LRU len: 7881, unzip_LRU len: 0
+I/O sum[10130]:cur[692], unzip sum[0]:cur[0]
+--------------
+ROW OPERATIONS
+--------------
+0 read views open inside InnoDB
+, state: sleeping
+----------------------------
+END OF INNODB MONITOR OUTPUT
+============================
+

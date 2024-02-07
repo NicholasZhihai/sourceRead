@@ -1,6 +1,8 @@
 package com.source.read;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -10,12 +12,9 @@ import java.util.List;
  */
 public class Test {
     public static void main(String[] args) {
-        List<Long> newOrderedGroupIds = new ArrayList<>();
-        newOrderedGroupIds.add(1L);
-        newOrderedGroupIds.add(2L);
-        newOrderedGroupIds.add(3L);
-        newOrderedGroupIds.add(4L);
-        newOrderedGroupIds.add(newOrderedGroupIds.indexOf(4L) + 1, 8L);
-        System.out.println(newOrderedGroupIds);
+        Calendar calendar=Calendar.getInstance();
+        System.out.println(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
+        calendar.add(2,-1);
+        System.out.println(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
     }
 }
