@@ -1,0 +1,53 @@
+{
+  "name": "验证码助手",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "icons": {
+    "16": "image/hf.png",
+    "48": "image/hf.png",
+    "128": "image/hf.png"
+  },
+  "description": "理财中台验证码助手",
+  "content_scripts": [
+    {
+      "js": [
+        "script/lczt.js"
+      ],
+      "matches": [
+        "http://10.35.250.203:8080/login*"
+      ]
+    },
+    {
+      "js": [
+        "script/lczt.js"
+      ],
+      "matches": [
+        "http://15.24.194.11:8080/login*"
+      ]
+    },
+    {
+      "js": [
+        "script/lcztOld.js"
+      ],
+      "matches": [
+        "http://15.28.142.16:6518/*"
+      ]
+    },
+    {
+      "js": [
+        "script/jenkins.js"
+      ],
+      "matches": [
+        "http://rdc.pengyu.wang:8080/login*"
+      ]
+    },
+    {
+      "js": [
+        "script/git.js"
+      ],
+      "matches": [
+        "http://10.32.108.93:3000/user/login*"
+      ]
+    }
+  ]
+}
